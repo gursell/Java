@@ -1,0 +1,24 @@
+package practise;
+import java.util.Scanner;
+public class Q13_BolmeOperatoruKullanmadanBolme {
+    static int bolum; // class icinde olusturduk ki her meethod ile kullanabilelim...
+    // static yaptik ki static olan asgidaki method'ta kullanabilelim...
+    public static void main(String[] args) {
+        //Kullanicidan bolunen ve bolen seklinde 2 sayi alalim ve
+        //bolme operatoru kullanmadan bolme islemini gerceklestirip bolumu hesaplayan method create ediniz.
+        Scanner scan=new Scanner(System.in);
+        System.out.print("Lutfen bolunen sayiyi giriniz: ");
+        int bolunen= scan.nextInt();
+        System.out.print("Lutfen bolen sayiyi giriniz: ");
+        int bolen= scan.nextInt();
+        bolmeIslemi(bolunen,bolen);
+        System.out.println("Bolum : " + bolum);
+    }
+    public static int bolmeIslemi(int bolunen, int bolen) {
+        while (bolunen >= bolen) {
+            bolunen -= bolen;
+            bolum++;
+        }
+        return bolum;
+    }
+}
